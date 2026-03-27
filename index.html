@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polityka Prywatności — Pathes</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #FAFAF8;
+            --surface: #FFFFFF;
+            --text: #1A1A1A;
+            --text-secondary: #5A5A5A;
+            --accent: #2D6A4F;
+            --accent-light: #E8F5EE;
+            --border: #E8E8E4;
+            --radius: 12px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .header {
+            background: var(--accent);
+            color: white;
+            padding: 60px 24px 48px;
+            text-align: center;
+        }
+
+        .header .logo {
+            font-family: 'DM Serif Display', serif;
+            font-size: 2rem;
+            letter-spacing: 0.04em;
+            margin-bottom: 8px;
+        }
+
+        .header p {
+            font-size: 0.95rem;
+            opacity: 0.85;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        .meta {
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .meta span { display: flex; align-items: center; gap: 6px; }
+
+        h1 {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1.75rem;
+            margin-bottom: 24px;
+            color: var(--text);
+        }
+
+        h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 .num {
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 0.8rem;
+            font-weight: 600;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        p { margin-bottom: 14px; color: var(--text-secondary); font-size: 0.95rem; }
+
+        .highlight-box {
+            background: var(--accent-light);
+            border-left: 3px solid var(--accent);
+            border-radius: 0 var(--radius) var(--radius) 0;
+            padding: 16px 20px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            color: var(--text);
+        }
+
+        .data-list {
+            list-style: none;
+            margin: 12px 0 20px;
+            padding: 0;
+        }
+
+        .data-list li {
+            padding: 8px 0 8px 24px;
+            position: relative;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .data-list li::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 16px;
+            width: 6px;
+            height: 6px;
+            background: var(--accent);
+            border-radius: 50%;
+        }
+
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 24px;
+            margin: 20px 0;
+        }
+
+        .card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card p { margin-bottom: 8px; }
+
+        .toggle-demo {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #F0F0EC;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+
+        .toggle-dot {
+            width: 32px;
+            height: 18px;
+            background: #CCC;
+            border-radius: 9px;
+            position: relative;
+        }
+
+        .toggle-dot::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 14px;
+            height: 14px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .rights-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 16px 0;
+        }
+
+        .right-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 14px 16px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .right-item strong {
+            display: block;
+            color: var(--text);
+            font-size: 0.9rem;
+            margin-bottom: 2px;
+        }
+
+        .delete-section {
+            background: #FFF5F5;
+            border: 1px solid #FFE0E0;
+            border-radius: var(--radius);
+            padding: 24px;
+            margin: 20px 0;
+        }
+
+        .delete-section h3 {
+            color: #C53030;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .delete-section p { font-size: 0.9rem; }
+
+        .footer {
+            text-align: center;
+            padding: 32px 24px;
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .footer .brand {
+            font-family: 'DM Serif Display', serif;
+            font-size: 1rem;
+            color: var(--accent);
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .header { padding: 40px 20px 32px; }
+            .header .logo { font-size: 1.6rem; }
+            h1 { font-size: 1.4rem; }
+            .rights-grid { grid-template-columns: 1fr; }
+            .meta { flex-direction: column; gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <div class="logo">Pathes</div>
+    <p>Polityka Prywatności</p>
+</div>
+
+<div class="container">
+
+    <div class="meta">
+        <span>📄 Wersja 1.1</span>
+        <span>📅 Data wejścia w życie: 27 marca 2026</span>
+        <span>🏢 Pathes, Lubin, Polska</span>
+    </div>
+
+    <h1>Polityka Prywatności aplikacji Pathes</h1>
+
+    <p>Pathes zbiera dane, które pomagają ulepszać Twoje doświadczenie. Chcemy być transparentni — poniżej znajdziesz pełne informacje o tym, jakie dane zbieramy, w jakim celu i jakie masz prawa.</p>
+
+    <h2><span class="num">1</span> Administrator danych</h2>
+    <p>Administratorem Twoich danych osobowych jest Pathes z siedzibą w Lubinie, Polska. W razie pytań dotyczących przetwarzania danych możesz skontaktować się z nami pod adresem e-mail podanym w aplikacji.</p>
+
+    <h2><span class="num">2</span> Jakie dane zbieramy</h2>
+    <p>Aplikacja Pathes może zbierać następujące kategorie danych:</p>
+
+    <div class="card">
+        <h3>Dane podstawowe (niezbędne do działania aplikacji)</h3>
+        <ul class="data-list">
+            <li>Identyfikator konta użytkownika</li>
+            <li>Dane lokalizacyjne (GPS) — w trakcie aktywnego korzystania ze ścieżek</li>
+            <li>Dane z aparatu — wyłącznie do skanowania kodów QR na punktach kontrolnych</li>
+            <li>Interakcje NFC — odczyt znaczników na punktach kontrolnych tras</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>Analityka aktywności — PathesPulse</h3>
+        <div class="toggle-demo"><div class="toggle-dot"></div> Domyślnie wyłączone</div>
+        <p style="margin-top: 12px;">Za Twoją opcjonalną zgodą zbieramy dane pomagające ulepszać jakość ścieżek:</p>
+        <ul class="data-list">
+            <li>Historia ukończonych punktów</li>
+            <li>Czas spędzony na każdym punkcie</li>
+            <li>Wyniki mini-gier</li>
+            <li>Punkty porzucenia ścieżki</li>
+        </ul>
+        <div class="highlight-box">Możesz wycofać zgodę w dowolnym momencie w <strong>Ustawieniach → Prywatność</strong>.</div>
+    </div>
+
+    <h2><span class="num">3</span> Cel przetwarzania danych</h2>
+    <p>Twoje dane przetwarzamy w następujących celach:</p>
+    <ul class="data-list">
+        <li>Umożliwienie korzystania z funkcji aplikacji (trasy, QR, NFC, GPS)</li>
+        <li>Ulepszanie jakości ścieżek i doświadczenia użytkowników (za zgodą)</li>
+        <li>Zapewnienie bezpieczeństwa i stabilności aplikacji</li>
+    </ul>
+
+    <h2><span class="num">4</span> Podstawa prawna (RODO)</h2>
+    <p>Przetwarzanie danych odbywa się na podstawie:</p>
+    <ul class="data-list">
+        <li><strong>Art. 6 ust. 1 lit. b RODO</strong> — wykonanie umowy (niezbędne dane do działania aplikacji)</li>
+        <li><strong>Art. 6 ust. 1 lit. a RODO</strong> — Twoja dobrowolna zgoda (analityka, personalizacja AI)</li>
+        <li><strong>Art. 6 ust. 1 lit. f RODO</strong> — prawnie uzasadniony interes administratora (bezpieczeństwo)</li>
+    </ul>
+
+    <h2><span class="num">5</span> Podmioty przetwarzające dane</h2>
+    <p>W celu świadczenia usług korzystamy z następujących dostawców:</p>
+    <ul class="data-list">
+        <li><strong>Firebase (Google LLC)</strong> — uwierzytelnianie, baza danych, hosting</li>
+        <li><strong>Microsoft Azure</strong> — usługi chmurowe</li>
+    </ul>
+    <p>Dane mogą być przekazywane do USA na podstawie standardowych klauzul umownych (SCC) zgodnie z art. 46 RODO.</p>
+
+    <h2><span class="num">6</span> Okres przechowywania danych</h2>
+    <p>Dane przechowujemy przez okres korzystania z aplikacji. Po usunięciu konta Twoje dane zostaną trwale usunięte w ciągu 30 dni. Dane analityczne (PathesPulse) są anonimizowane po 12 miesiącach.</p>
+
+    <h2><span class="num">7</span> Twoje prawa (Art. 13 i 22 RODO)</h2>
+    <p>Przysługują Ci następujące prawa:</p>
+
+    <div class="rights-grid">
+        <div class="right-item">
+            <strong>Dostęp</strong>
+            Prawo do uzyskania informacji o przetwarzanych danych
+        </div>
+        <div class="right-item">
+            <strong>Sprostowanie</strong>
+            Prawo do poprawienia nieprawidłowych danych
+        </div>
+        <div class="right-item">
+            <strong>Usunięcie</strong>
+            Prawo do żądania usunięcia danych
+        </div>
+        <div class="right-item">
+            <strong>Przenoszenie</strong>
+            Prawo do otrzymania danych w formacie maszynowym
+        </div>
+        <div class="right-item">
+            <strong>Sprzeciw</strong>
+            Prawo do sprzeciwu wobec przetwarzania
+        </div>
+        <div class="right-item">
+            <strong>Skarga</strong>
+            Prawo do wniesienia skargi do PUODO
+        </div>
+    </div>
+
+    <p>Nie podejmujesz zautomatyzowanych decyzji, w tym profilowania, które wywołują skutki prawne (Art. 22 RODO).</p>
+
+    <h2><span class="num">8</span> Zarządzanie zgodami</h2>
+    <p>W aplikacji możesz w dowolnym momencie zmienić swoje zgody w sekcji <strong>Ustawienia → Prywatność</strong>. Obie zgody (analityka i personalizacja AI) są w pełni opcjonalne — możesz korzystać z aplikacji bez ich wyrażania.</p>
+
+    <h2><span class="num">9</span> Usuwanie konta i danych</h2>
+
+    <div class="delete-section">
+        <h3>Usuń wszystkie moje dane</h3>
+        <p>W sekcji <strong>Ustawienia → Prywatność</strong> możesz trwale usunąć swoje konto i wszystkie powiązane dane. Tej operacji nie można cofnąć. Usunięcie nastąpi w ciągu 30 dni od zgłoszenia.</p>
+    </div>
+
+    <h2><span class="num">10</span> Kontakt</h2>
+    <p>W przypadku pytań dotyczących prywatności lub chęci skorzystania z przysługujących Ci praw, skontaktuj się z nami za pośrednictwem danych kontaktowych dostępnych w aplikacji.</p>
+
+    <p>Masz również prawo wnieść skargę do <strong>Prezesa Urzędu Ochrony Danych Osobowych (PUODO)</strong>, ul. Stawki 2, 00-193 Warszawa.</p>
+
+    <div class="footer">
+        <div class="brand">Pathes</div>
+        <p>© 2026 Pathes. Wszelkie prawa zastrzeżone.</p>
+    </div>
+
+</div>
+
+</body>
+</html>
